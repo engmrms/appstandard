@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Form from './components/Form/Form';
+import logger from './utilities/log';
+logger.init();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+     //throw new Error("Woops !!!!!!!!!!");
+  //console.log("test tstst gh");
+  try {
+    throw new Error("Woops !!!!!!!!!!");
+  } catch (error) {
+     console.error(error)
+  }
+  
+
+    // fetch('https://123456jsonplaceholder.typicode.com/todos/55555555551')
+    //   .then(response => response.json())
+    //   .then(json => json).catch(err=>console.error(err));
+ 
+  return <Form/>;
 }
 
 export default App;
